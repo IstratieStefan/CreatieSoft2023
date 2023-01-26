@@ -1,7 +1,7 @@
 import openai
 
 # Set the API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Define the prompt
 print("scrie o intrebare")
@@ -14,7 +14,7 @@ completions = openai.Completion.create(
     max_tokens=1024,
     n=1,
     stop=None,
-    temperature=0.7,
+    temperature=0.7
 )
 
 # Print the generated text
