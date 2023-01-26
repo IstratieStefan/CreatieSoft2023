@@ -11,7 +11,7 @@ from PyQt5.QtCore import QTimer
 
 
 # Set the API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 class ChatUI(QWidget):
@@ -35,11 +35,16 @@ class ChatUI(QWidget):
         layout.addLayout(h_layout)
         self.setLayout(layout)
 
+        bg_color = "#d8dee9"
+        self.line_edit.setStyleSheet("background-color: {}".format(bg_color))
+        self.text_edit.setStyleSheet("background-color: {}".format(bg_color))
+        self.line_edit.setStyleSheet("background-color: #d8dee9;")
+
         self.setWindowIcon(QtGui.QIcon("moisilai.ico"))
         self.setWindowTitle("Moisil Chatbot")
         self.setAutoFillBackground(True)
         p = self.palette()
-        p.setColor(self.backgroundRole(), Qt.darkGray)
+        p.setColor(self.backgroundRole(), QtGui.QColor("#3b4252"))
         self.setPalette(p)
         self.resize(800, 500)
 
@@ -56,7 +61,7 @@ class ChatUI(QWidget):
             max_tokens=1024,
             n=1,
             stop=None,
-            temperature=0.2
+            temperature=0.3
         )
         generated_text = completions.choices[0].text
         self.text_edit.append("<font color='blueviolet' bgcolor='lightgrey'>" + text + "</font>")
