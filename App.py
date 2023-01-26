@@ -71,3 +71,5 @@ class Ui_MainWindow(object):
         self.ClearButton.setText(QCoreApplication.translate("MainWindow", u"Clear Conversation", None))
     # retranslateUi
 
+
+
