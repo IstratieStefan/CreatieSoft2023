@@ -11,7 +11,7 @@ from PyQt5.QtCore import QTimer
 
 
 # Set the API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 class ChatUI(QWidget):
