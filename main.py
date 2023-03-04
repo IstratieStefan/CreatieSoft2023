@@ -11,7 +11,7 @@ from PyQt5.QtCore import QTimer
 
 
 # Set the API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 class ChatUI(QWidget):
@@ -61,7 +61,7 @@ class ChatUI(QWidget):
             max_tokens=1024,
             n=1,
             stop=None,
-            temperature=0.3
+            temperature=1,
         )
         generated_text = completions.choices[0].text
         self.text_edit.append("<font color='blueviolet' bgcolor='lightgrey'>" + text + "</font>")
